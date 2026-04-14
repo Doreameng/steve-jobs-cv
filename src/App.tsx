@@ -88,32 +88,32 @@ const principles = [
 
 function App() {
   return (
-    <main className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
-      <header className="glass-nav fixed inset-x-0 top-0 z-50 border-b border-white/10">
+    <main className="min-h-screen bg-[#f5f4ed] text-[#141413]">
+      <header className="warm-nav fixed inset-x-0 top-0 z-50">
         <nav
-          className="container flex h-12 items-center justify-between text-xs text-white/85"
+          className="container flex h-14 items-center justify-between text-sm text-[#5e5d59]"
           aria-label="Primary navigation"
         >
-          <a className="font-semibold text-white" href="#top">
+          <a className="font-display text-lg font-medium text-[#141413]" href="#top">
             Steve Jobs
           </a>
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#profile" className="transition hover:text-white">
+            <a href="#profile" className="transition hover:text-[#141413]">
               Profile
             </a>
-            <a href="#career" className="transition hover:text-white">
+            <a href="#career" className="transition hover:text-[#141413]">
               Career
             </a>
-            <a href="#work" className="transition hover:text-white">
+            <a href="#work" className="transition hover:text-[#141413]">
               Work
             </a>
-            <a href="#principles" className="transition hover:text-white">
+            <a href="#principles" className="transition hover:text-[#141413]">
               Principles
             </a>
           </div>
           <a
             href="#sources"
-            className="rounded-md px-3 py-2 text-white transition hover:bg-white/10"
+            className="rounded-xl bg-[#e8e6dc] px-3 py-2 text-[#4d4c48] shadow-[0_0_0_1px_#d1cfc5] transition hover:bg-[#dedbd0]"
           >
             Sources
           </a>
@@ -122,22 +122,22 @@ function App() {
 
       <section
         id="top"
-        className="bg-black px-4 pb-14 pt-24 text-white sm:pb-18 lg:pb-20"
+        className="px-4 pb-16 pt-28 sm:pb-24 lg:pb-28"
       >
-        <div className="container grid min-h-[78svh] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
-            <Badge className="mb-6 bg-[#0071e3] text-white">
-              1955-2011 | Product leader
+        <div className="container grid min-h-[78svh] items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="mx-auto max-w-3xl lg:mx-0">
+            <Badge className="mb-6 bg-[#e8e6dc] text-[#4d4c48] shadow-[0_0_0_1px_#d1cfc5]">
+              1955-2011 | product leader
             </Badge>
-            <h1 className="font-display text-5xl font-semibold leading-[1.08] text-balance sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-5xl font-medium leading-[1.1] text-balance sm:text-6xl lg:text-[4rem]">
               Steve Jobs
             </h1>
-            <p className="mt-5 text-xl leading-7 text-white/88 sm:text-2xl sm:leading-8">
+            <p className="mt-6 max-w-2xl text-xl leading-[1.6] text-[#5e5d59]">
               Co-founder of Apple. Founder of NeXT. Chairman and driving force
               behind Pixar's rise. A career defined by focus, taste, and
               category-changing products.
             </p>
-            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg">
                 <a href="#career">
                   View career
@@ -147,8 +147,7 @@ function App() {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-white bg-transparent text-white hover:bg-white hover:text-black"
+                variant="secondary"
               >
                 <a href="#work">Selected work</a>
               </Button>
@@ -156,19 +155,21 @@ function App() {
           </div>
 
           <div className="relative mx-auto w-full max-w-3xl">
-            <img
-              src={keynoteImage}
-              alt="Steve Jobs presenting the iPhone at Macworld 2007"
-              className="aspect-[3/2] w-full rounded-lg object-cover shadow-apple"
-            />
-            <div className="mt-4 grid grid-cols-3 gap-2 text-center text-white">
+            <div className="organic-mark rounded-[32px] p-3 shadow-whisper">
+              <img
+                src={keynoteImage}
+                alt="Steve Jobs presenting the iPhone at Macworld 2007"
+                className="aspect-[3/2] w-full rounded-3xl object-cover"
+              />
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-3 text-[#141413]">
               {stats.map((stat) => (
                 <div
-                  className="min-h-24 rounded-lg bg-white/10 px-3 py-4 backdrop-blur"
+                  className="min-h-24 rounded-2xl border border-[#f0eee6] bg-[#faf9f5] px-4 py-4 shadow-whisper"
                   key={stat.label}
                 >
-                  <p className="text-2xl font-semibold">{stat.value}</p>
-                  <p className="mt-1 text-xs leading-5 text-white/72">
+                  <p className="font-display text-2xl font-medium">{stat.value}</p>
+                  <p className="mt-1 text-xs leading-5 text-[#87867f]">
                     {stat.label}
                   </p>
                 </div>
@@ -178,24 +179,24 @@ function App() {
         </div>
       </section>
 
-      <section id="profile" className="px-4 py-20 sm:py-24">
+      <section id="profile" className="border-t border-[#e8e6dc] px-4 py-20 sm:py-28">
         <div className="container grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-center">
-          <div className="overflow-hidden rounded-lg bg-white shadow-apple">
+          <div className="overflow-hidden rounded-[32px] border border-[#f0eee6] bg-[#faf9f5] p-3 shadow-whisper">
             <img
               src={portraitImage}
               alt="Steve Jobs holding a MacBook Air at Macworld 2008"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/5] w-full rounded-3xl object-cover"
             />
           </div>
           <div>
-            <p className="text-sm font-semibold text-[#0066cc]">
-              Executive Profile
+            <p className="text-xs font-medium uppercase tracking-[0.5px] text-[#c96442]">
+              Chapter 01 | Executive Profile
             </p>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-medium leading-[1.2] text-balance sm:text-5xl">
               Built companies around the meeting point of technology and the
               liberal arts.
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-black/80">
+            <p className="mt-6 max-w-3xl text-lg leading-[1.6] text-[#5e5d59]">
               Jobs' resume reads less like a sequence of roles and more like a
               set of inflection points: the personal computer, the animated
               feature film, the digital music library, the modern smartphone,
@@ -210,13 +211,13 @@ function App() {
         </div>
       </section>
 
-      <section id="career" className="bg-black px-4 py-20 text-white sm:py-24">
+      <section id="career" className="bg-[#141413] px-4 py-20 text-[#faf9f5] sm:py-28">
         <div className="container">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-[#2997ff]">
-              Career Timeline
+            <p className="text-xs font-medium uppercase tracking-[0.5px] text-[#d97757]">
+              Chapter 02 | Career Timeline
             </p>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-medium leading-[1.2] text-balance sm:text-5xl">
               Founder, builder, return CEO.
             </h2>
           </div>
@@ -224,17 +225,19 @@ function App() {
             {career.map((item) => (
               <Card
                 key={item.period}
-                className="min-h-[25rem] border-0 bg-[#272729] text-white"
+                className="min-h-[25rem] border-[#30302e] bg-[#30302e] text-[#faf9f5] shadow-none"
               >
                 <CardHeader>
                   <Badge
                     variant="secondary"
-                    className="w-fit bg-white text-[#1d1d1f]"
+                    className="w-fit bg-[#e8e6dc] text-[#4d4c48]"
                   >
                     {item.period}
                   </Badge>
-                  <CardTitle className="pt-4 text-2xl">{item.title}</CardTitle>
-                  <CardDescription className="text-white/70">
+                  <CardTitle className="pt-4 font-display text-2xl font-medium">
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="text-[#b0aea5]">
                     {item.detail}
                   </CardDescription>
                 </CardHeader>
@@ -244,7 +247,7 @@ function App() {
                       <Badge
                         key={tag}
                         variant="outline"
-                        className="border-white/16 text-white"
+                        className="border-[#4d4c48] text-[#b0aea5]"
                       >
                         {tag}
                       </Badge>
@@ -257,18 +260,18 @@ function App() {
         </div>
       </section>
 
-      <section id="work" className="px-4 py-20 sm:py-24">
+      <section id="work" className="px-4 py-20 sm:py-28">
         <div className="container">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold text-[#0066cc]">
-                Selected Work
+              <p className="text-xs font-medium uppercase tracking-[0.5px] text-[#c96442]">
+                Chapter 03 | Selected Work
               </p>
-              <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance sm:text-5xl">
+              <h2 className="mt-3 font-display text-4xl font-medium leading-[1.2] text-balance sm:text-5xl">
                 Products that changed expectations.
               </h2>
             </div>
-            <Button asChild variant="link" className="justify-start text-[#0066cc]">
+            <Button asChild variant="link" className="justify-start">
               <a href="#principles">
                 Leadership principles
                 <ArrowUpRight className="ml-1 h-4 w-4" />
@@ -281,14 +284,16 @@ function App() {
               return (
                 <Card
                   key={product.title}
-                  className="min-h-64 border-0 bg-white shadow-none"
+                  className="min-h-64 border-[#f0eee6] bg-[#faf9f5]"
                 >
                   <CardHeader>
-                    <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-[#0071e3] text-white">
+                    <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e6dc] text-[#c96442] shadow-[0_0_0_1px_#d1cfc5]">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <CardTitle className="text-2xl">{product.title}</CardTitle>
-                    <CardDescription className="text-base leading-7 text-black/72">
+                    <CardTitle className="font-display text-2xl font-medium">
+                      {product.title}
+                    </CardTitle>
+                    <CardDescription className="text-base leading-[1.6] text-[#5e5d59]">
                       {product.body}
                     </CardDescription>
                   </CardHeader>
@@ -301,25 +306,25 @@ function App() {
 
       <section
         id="principles"
-        className="bg-white px-4 py-20 text-[#1d1d1f] sm:py-24"
+        className="border-y border-[#e8e6dc] bg-[#faf9f5] px-4 py-20 text-[#141413] sm:py-28"
       >
         <div className="container grid gap-12 lg:grid-cols-[0.75fr_1fr]">
           <div>
-            <p className="text-sm font-semibold text-[#0066cc]">
-              Leadership Profile
+            <p className="text-xs font-medium uppercase tracking-[0.5px] text-[#c96442]">
+              Chapter 04 | Leadership Profile
             </p>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance sm:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-medium leading-[1.2] text-balance sm:text-5xl">
               A high bar for clarity.
             </h2>
           </div>
           <div className="space-y-6">
             {principles.map((principle, index) => (
               <div className="grid gap-5 sm:grid-cols-[4rem_1fr]" key={principle}>
-                <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#f5f5f7] text-lg font-semibold">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e8e6dc] font-display text-lg font-medium text-[#4d4c48]">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div>
-                  <p className="text-xl leading-8 text-black/84">{principle}</p>
+                  <p className="text-xl leading-[1.6] text-[#4d4c48]">{principle}</p>
                   {index < principles.length - 1 ? (
                     <Separator className="mt-6" />
                   ) : null}
@@ -330,7 +335,7 @@ function App() {
         </div>
       </section>
 
-      <section className="bg-black px-4 py-20 text-white sm:py-24">
+      <section className="bg-[#141413] px-4 py-20 text-[#faf9f5] sm:py-28">
         <div className="container grid gap-5 md:grid-cols-3">
           <Credential
             icon={GraduationCap}
@@ -350,14 +355,14 @@ function App() {
         </div>
       </section>
 
-      <footer id="sources" className="px-4 py-10 text-sm text-black/64">
+      <footer id="sources" className="px-4 py-10 text-sm text-[#87867f]">
         <div className="container flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p>
             Image credits: Matthew Yohe, CC BY 3.0; Blake Patterson, CC BY 2.0.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://www.invent.org/inductees/steve-jobs"
               rel="noreferrer"
               target="_blank"
@@ -365,7 +370,7 @@ function App() {
               Career reference
             </a>
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://nationalmedals.org/laureate/steve-jobs/"
               rel="noreferrer"
               target="_blank"
@@ -373,7 +378,7 @@ function App() {
               Award reference
             </a>
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://californiamuseum.org/inductee/steve-jobs/"
               rel="noreferrer"
               target="_blank"
@@ -381,7 +386,7 @@ function App() {
               Hall of Fame reference
             </a>
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://www.reed.edu/about/steve-jobs.html"
               rel="noreferrer"
               target="_blank"
@@ -389,7 +394,7 @@ function App() {
               Education reference
             </a>
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://commons.wikimedia.org/wiki/File:Steve_Jobs.jpg"
               rel="noreferrer"
               target="_blank"
@@ -397,7 +402,7 @@ function App() {
               Portrait source
             </a>
             <a
-              className="text-[#0066cc] hover:underline"
+              className="text-[#c96442] hover:underline"
               href="https://commons.wikimedia.org/wiki/File:Steve_Jobs_presents_iPhone_(cropped_3-2).jpg"
               rel="noreferrer"
               target="_blank"
@@ -413,9 +418,11 @@ function App() {
 
 function InfoTile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="min-h-32 rounded-lg bg-white px-5 py-6">
-      <p className="text-sm text-black/48">{label}</p>
-      <p className="mt-3 text-lg font-semibold leading-6">{value}</p>
+    <div className="min-h-32 rounded-2xl border border-[#f0eee6] bg-[#faf9f5] px-5 py-6 shadow-whisper">
+      <p className="text-sm text-[#87867f]">{label}</p>
+      <p className="mt-3 font-display text-lg font-medium leading-6 text-[#141413]">
+        {value}
+      </p>
     </div>
   );
 }
@@ -430,13 +437,13 @@ function Credential({
   value: string;
 }) {
   return (
-    <Card className="min-h-56 border-0 bg-[#272729] text-white">
+    <Card className="min-h-56 border-[#30302e] bg-[#30302e] text-[#faf9f5] shadow-none">
       <CardHeader>
-        <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-white text-black">
+        <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-2xl bg-[#e8e6dc] text-[#c96442]">
           <Icon className="h-5 w-5" />
         </div>
-        <CardTitle className="text-2xl">{label}</CardTitle>
-        <CardDescription className="text-base leading-7 text-white/70">
+        <CardTitle className="font-display text-2xl font-medium">{label}</CardTitle>
+        <CardDescription className="text-base leading-[1.6] text-[#b0aea5]">
           {value}
         </CardDescription>
       </CardHeader>
